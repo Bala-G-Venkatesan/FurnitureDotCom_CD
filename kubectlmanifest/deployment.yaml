@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: comfurniture
-          image: balajidevops1/comfurtniture:latest
+          image: balajidevops1/comfurtniture:replaceImageTag
           ports:
             - containerPort: 80
           
