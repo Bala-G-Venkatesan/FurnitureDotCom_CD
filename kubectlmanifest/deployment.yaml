@@ -1,0 +1,23 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: comfurnituredeployment
+  labels:
+    app: comfurniture
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: comfurniturepods
+  template:
+    metadata:
+      name: comfurniture-pod
+      labels:
+        app: comfurniturepods
+    spec:
+      containers:
+        - name: comfurniture
+          image: balajidevops1/comfurtniture:latest
+          ports:
+            - containerPort: 80
+          
